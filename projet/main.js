@@ -13,8 +13,8 @@ document.querySelector("button.bg-cyan-900").onclick = () => {
 
 };
 // Task Add
-function ajoutTache(e){
-    e.preventDefault();
+function ajoutTache(){
+
     let tachesAjouter ={
         title:titre.value,
         description:descriptionTache.value,
@@ -29,3 +29,6 @@ function ajoutTache(e){
 }
 
 formTache.addEventListener("submit",ajoutTache);
+
+
+afficherTaches();
