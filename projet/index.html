@@ -41,7 +41,7 @@
                         clip-rule="evenodd" />
                 </svg>
                 <!-- Bouton "Add Task" -->
-                <button
+                <button id="addTache"
                     class="font-title bg-cyan-900 rounded-xl w-28 h-10 text-white font-bold hover:bg-cyan-800 whitespace-nowrap">Add
                     Task +</button>
             </div>
@@ -165,7 +165,7 @@
                 </svg>
 
                 <div class="flex flex-col p-4">
-                    <h3 class=" flex justify-center items-center">Ajouter une tache</h3>
+                    <h3 class=" flex justify-center items-center">Modifer une tache</h3>
                     <form id="form-tache-edit" action="" class="flex flex-col pt-16 gap-4">
 
                         <select value="" class=" border-2 border-gray-200 rounded-lg p-2" id="priorite-liste-edit">
@@ -195,8 +195,8 @@
                             <textarea value="" class=" border-gray-200 border-2 rounded-lg p-2"
                                 id="tache-description-edit" name="task-description"></textarea>
                         </div>
-                        <button type="submit" id="bouton-ajouter"
-                            class="color-primary bg-primary rounded-3xl h-12 w-full text-white font-title font-bold ">Add
+                        <button type="submit" id="bouton-editer"
+                            class="color-primary bg-primary rounded-3xl h-12 w-full text-white font-title font-bold ">Save
                             Task</button>
                         <div id="error">
                             <p class="text-green text-center" id="error-text"></p>

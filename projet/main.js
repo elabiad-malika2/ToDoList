@@ -6,16 +6,20 @@ const descriptionTache = document.getElementById("tache-description");
 const btnAdd = document.getElementById("bouton-ajouter");
 const statusTache = document.getElementById("status")
 const formTache = document.getElementById("form-tache");
-const modeleEdit = document.getElementById("modele-id");
+// Edit
+const modeleEdit = document.getElementById("modele-edit");
 const prioriteEdit = document.getElementById("priorite-liste-edit");
 const titreEdit = document.getElementById("tache-titre-edit");
 const descriptionEdit = document.getElementById("tache-description-edit");
 const dateEdit = document.getElementById("tache-date-edit");
+const btnEdit = document.getElementById("bouton-editer");
+const statusEdit = document.getElementById("status-edit")
+const formEdit = document.getElementById("form-tache-edit");
 
 
 
 
-document.querySelector("button.bg-cyan-900").onclick = () => {
+document.getElementById("addTache").onclick = () => {
     modele.style.display = "flex";
 
 };
@@ -49,7 +53,7 @@ function afficherTaches(){
             <div class="absolute top-0 left-0 w-full h-2 ${tache.priorite === '1' ? 'bg-red-500' : tache.priorite === '2' ? 'bg-black' : 'bg-green-500'} rounded-t-3xl"></div>
             <div class="flex flex-col px-4 h-full justify-center items-center relative">
                 <div class="absolute top-4 right-2" >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 24 24" class="fill-current text-gray-600">
+                    <svg onclick="showEdit()" xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 24 24" class="fill-current text-gray-600">
                         <path d="m14.06 9.02l.92.92L5.92 19H5v-.92zM17.66 3c-.25 0-.51.1-.7.29l-1.83 1.83l3.75 3.75l1.83-1.83a.996.996 0 0 0 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29m-3.6 3.19L3 17.25V21h3.75L17.81 9.94z"/>
                     </svg>
                 </div>
@@ -70,3 +74,8 @@ function afficherTaches(){
     
 }
 afficherTaches();
+function showEdit(){
+    modeleEdit.style.display = "flex";
+
+
+}
