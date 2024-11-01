@@ -153,6 +153,59 @@
 
             </div>
         </div>
+        <!-- edit model -->
+        <div id="modele-edit" class="modele bg-black bg-opacity-75 hidden items-center justify-center fixed inset-0 z-50 ">
+            <div class="w-1/4 h-auto  border-2 border-black rounded-3xl bg-white relative z-50 ">
+                <svg class=" fill-primary absolute cursor-pointer top-0 right-0 pr-4 pt-2 w-10 h-8"
+                    xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 24 24">
+                    <path
+                        d="M20.48 3.512a11.97 11.97 0 0 0-8.486-3.514C5.366-.002-.007 5.371-.007 11.999c0 3.314 1.344 6.315 3.516 8.487A11.97 11.97 0 0 0 11.995 24c6.628 0 12.001-5.373 12.001-12.001c0-3.314-1.344-6.315-3.516-8.487m-1.542 15.427a9.8 9.8 0 0 1-6.943 2.876c-5.423 0-9.819-4.396-9.819-9.819a9.8 9.8 0 0 1 2.876-6.943a9.8 9.8 0 0 1 6.942-2.876c5.422 0 9.818 4.396 9.818 9.818a9.8 9.8 0 0 1-2.876 6.942z" />
+                    <path fill="#5051fa"
+                        d="m13.537 12l3.855-3.855a1.091 1.091 0 0 0-1.542-1.541l.001-.001l-3.855 3.855l-3.855-3.855A1.091 1.091 0 0 0 6.6 8.145l-.001-.001l3.855 3.855l-3.855 3.855a1.091 1.091 0 1 0 1.541 1.542l.001-.001l3.855-3.855l3.855 3.855a1.091 1.091 0 1 0 1.542-1.541l-.001-.001z" />
+                </svg>
+
+                <div class="flex flex-col p-4">
+                    <h3 class=" flex justify-center items-center">Ajouter une tache</h3>
+                    <form id="form-tache-edit" action="" class="flex flex-col pt-16 gap-4">
+
+                        <select value="" class=" border-2 border-gray-200 rounded-lg p-2" id="priorite-liste-edit">
+                            <option id="" disabled> ---Choose a priority--- </option>
+                            <option value="1"> P1 </option>
+                            <option value="2"> P2 </option>
+                            <option value="3"> P3 </option>
+                        </select>
+                        <div class="flex flex-col">
+                            <label for="tache-titre-edit">Title</label>
+                            <input value="text" class=" border-gray-200 border-2 rounded-lg p-2" type="text"
+                                id="tache-titre-edit" name="task-title">
+                        </div>
+                        <select value="" class=" border-2 border-gray-200 rounded-lg p-2" id="status-edit">
+                            <option id="" disabled> ---Choose a Staut--- </option>
+                            <option value="todo"> To Do </option>
+                            <option value="doing"> Doing </option>
+                            <option value="done"> Done</option>
+                        </select>
+                        <div class="flex flex-col">
+                            <label for="tache-date-edit">Date</label>
+                            <input value="" class=" border-gray-200 border-2 rounded-lg p-2" type="date"
+                                id="tache-date-edit" name="task-date">
+                        </div>
+                        <div class="flex flex-col">
+                            <label value="" for="tache-description">Description</label>
+                            <textarea value="" class=" border-gray-200 border-2 rounded-lg p-2"
+                                id="tache-description-edit" name="task-description"></textarea>
+                        </div>
+                        <button type="submit" id="bouton-ajouter"
+                            class="color-primary bg-primary rounded-3xl h-12 w-full text-white font-title font-bold ">Add
+                            Task</button>
+                        <div id="error">
+                            <p class="text-green text-center" id="error-text"></p>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
         
     </main>
     <script src="./main.js"></script>
