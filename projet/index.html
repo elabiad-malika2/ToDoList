@@ -72,13 +72,10 @@
 
 
                 </div>
-                <div id="todo-tasks-container"
+                <div id="todo-tache"
                     class="border-dashed border-2 border-borderColor rounded-3xl h-auto  p-4 w-full relative z-10">
 
                 </div>
-                <button id="btn-add-todo"
-                    class="color-primary bg-primary rounded-3xl h-12 w-64 text-white font-title font-bold ">Add
-                    Card</button>
             </div>
             <!-- DOING LIST -->
             <div class="flex flex-col gap-4 items-center relative">
@@ -86,13 +83,11 @@
                     class="border-dashed border-2 border-borderColor rounded-3xl h-16 bg-white  p-4 w-full relative z-10">
                     <h3>DOING List</h3>
                 </div>
-                <div id="doing-tasks-container"
+                <div id="doing-tache"
                     class="border-dashed border-2 border-borderColor rounded-3xl h-auto w-full p-4 relative z-10">
 
                 </div>
-                <button type="submit" id="btn-add-doing"
-                    class="color-primary bg-primary rounded-3xl h-12 w-64 text-white font-title font-bold ">Add
-                    Card</button>
+            
             </div>
             <!-- DONE LIST -->
             <div class="flex flex-col gap-4 items-center relative">
@@ -100,17 +95,14 @@
                     class="border-dashed border-2 border-borderColor rounded-3xl h-16 bg-white  p-4 w-full relative z-10">
                     <h3>DONE List</h3>
                 </div>
-                <div id="done-tasks-container"
+                <div id="done-tache"
                     class="border-dashed border-2 border-borderColor rounded-3xl h-auto w-full p-4 z-10">
 
-                </div>
-                <button id="btn-add-done"
-                    class="color-primary bg-primary rounded-3xl h-12 w-64 text-white font-title font-bold ">Add
-                    Card</button>
+            </div>
             </div>
         </div>
         <!-- FIN Tasks -->
-        <div id="modal" class="modal bg-black bg-opacity-75 hidden items-center justify-center fixed inset-0 z-50 ">
+        <div id="modele" class="modele bg-black bg-opacity-75 hidden items-center justify-center fixed inset-0 z-50 ">
             <div class="w-1/4 h-3/4  border-2 border-black rounded-3xl bg-white relative z-50 ">
                 <svg class=" fill-primary absolute cursor-pointer top-0 right-0 pr-4 pt-2 w-10 h-8"
                     xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 24 24">
@@ -121,31 +113,31 @@
                 </svg>
 
                 <div class="flex flex-col p-4">
-                    <h3 class=" flex justify-center items-center" id="modal-title"></h3>
-                    <form id="task-form" action="" class="flex flex-col pt-16 gap-4">
+                    <h3 class=" flex justify-center items-center" id="modele-titre"></h3>
+                    <form id="tache" action="" class="flex flex-col pt-16 gap-4">
 
-                        <select value="" class=" border-2 border-gray-200 rounded-lg p-2" id="priority-list">
-                            <option id="priority" disabled> ---Choose a priority--- </option>
+                        <select value="" class=" border-2 border-gray-200 rounded-lg p-2" id="priorite-liste">
+                            <option id="priorite" disabled> ---Choose a priority--- </option>
                             <option value="1"> P1 </option>
                             <option value="2"> P2 </option>
                             <option value="3"> P3 </option>
                         </select>
                         <div class="flex flex-col">
-                            <label for="task-title-input ">Title</label>
-                            <input value="" class=" border-gray-200 border-2 rounded-lg p-2" type="text"
-                                id="task-title-input" name="task-title">
+                            <label for="tache-titre ">Title</label>
+                            <input value="text" class=" border-gray-200 border-2 rounded-lg p-2" type="text"
+                                id="tache-titre" name="task-title">
                         </div>
                         <div class="flex flex-col">
-                            <label for="task-date-input">Date</label>
+                            <label for="tache-date">Date</label>
                             <input value="" class=" border-gray-200 border-2 rounded-lg p-2" type="date"
-                                id="task-date-input" name="task-date">
+                                id="tache-date" name="task-date">
                         </div>
                         <div class="flex flex-col">
-                            <label value="" for="task-description-input">Description</label>
+                            <label value="" for="tache-description">Description</label>
                             <textarea value="" class=" border-gray-200 border-2 rounded-lg p-2"
-                                id="task-description-input" name="task-description"></textarea>
+                                id="tache-description" name="task-description"></textarea>
                         </div>
-                        <button type="submit" id="btn-add-modal"
+                        <button type="submit" id="bouton-ajouter"
                             class="color-primary bg-primary rounded-3xl h-12 w-full text-white font-title font-bold ">Add
                             Task</button>
                         <div id="error">
