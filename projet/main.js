@@ -6,7 +6,14 @@ const descriptionTache = document.getElementById("tache-description");
 const btnAdd = document.getElementById("bouton-ajouter");
 const statusTache = document.getElementById("status")
 const formTache = document.getElementById("form-tache");
-var  aa = []
+const modeleEdit = document.getElementById("modele-id");
+const prioriteEdit = document.getElementById("priorite-liste-edit");
+const titreEdit = document.getElementById("tache-titre-edit");
+const descriptionEdit = document.getElementById("tache-description-edit");
+const dateEdit = document.getElementById("tache-date-edit");
+
+
+
 
 document.querySelector("button.bg-cyan-900").onclick = () => {
     modele.style.display = "flex";
