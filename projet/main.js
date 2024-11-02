@@ -43,7 +43,10 @@ formTache.addEventListener("submit",ajoutTache);
 
 // Show task
 function afficherTaches(){
-    
+    document.getElementById("todo-tache").innerHTML=""
+    document.getElementById("doing-tache").innerHTML=""
+    document.getElementById("done-tache").innerHTML=""
+
     const taches = JSON.parse(localStorage.getItem("taches")) || [] ;
     console.log(taches);
     taches.forEach((tache,index) => {
@@ -103,9 +106,5 @@ function showEdit(index){
     })
 
     afficherTaches();
-
-}
-function deleteTache(index){
-    
 
 }
