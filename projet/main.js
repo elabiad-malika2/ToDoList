@@ -6,6 +6,9 @@ const descriptionTache = document.getElementById("tache-description");
 const btnAdd = document.getElementById("bouton-ajouter");
 const statusTache = document.getElementById("status")
 const formTache = document.getElementById("form-tache");
+const nbr_todo = document.getElementById("nbrTodo");
+const nbr_doing = document.getElementById("nbrDoing");
+const nbr_done = document.getElementById("nbrDone");
 // Edit
 const modeleEdit = document.getElementById("modele-edit");
 const prioriteEdit = document.getElementById("priorite-liste-edit");
@@ -112,15 +115,6 @@ function showEdit(index){
         localStorage.setItem("taches",JSON.stringify(tache));
     })
 
-    afficherTaches();
-
-}
-function deleteTache(index){
-    const tache = JSON.parse(localStorage.getItem("taches")) || [];
-    tache.splice(index,1);
-    console.log("tastkt to delelte", tache[index]);
-    
-    localStorage.setItem("taches",JSON.stringify(tache));
     afficherTaches();
 
 }

@@ -47,7 +47,7 @@
             </div>
         </nav>
     </section>
-    <main class="p-4 flex flex-col gap-16">
+    <main class="p-4 flex flex-col gap-16 h-full">
         <div class="flex flex-col justify-between">
 
 
@@ -62,24 +62,22 @@
         <!-- Tasks -->
         <div class="bg-gray-100 p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-full">
 
-            <div class="flex flex-col gap-4 items-center relative">
+            <div class="flex flex-col gap-4 items-center relative h-full">
                 <div id=""
                     class="border-dashed border-2 border-borderColor rounded-3xl h-16 bg-white  p-4 w-full relative z-10 flex justify-between">
                     <h3>TODO List</h3>
-
                     <p id="nbrTodo">0</p>
-                    <img class="w-12" src="./image/filter.png" alt="">
 
 
                 </div>
-                <div id="todo-tache" class="border-dashed border-2 border-borderColor rounded-3xl h-auto  p-4 w-full relative z-10 ">
+                <div id="todo-tache" class="border-dashed border-2 border-borderColor rounded-3xl h-auto overflow-y-auto  p-4 w-full relative z-10 ">
 
                 </div>
             </div>
             <!-- DOING LIST -->
             <div class="flex flex-col gap-4 items-center relative">
                 <div id=""
-                    class="border-dashed border-2 border-borderColor rounded-3xl h-16 bg-white  p-4 w-full relative z-10">
+                    class="border-dashed border-2 border-borderColor rounded-3xl h-16 bg-white  p-4 w-full relative z-10 flex justify-between">
                     <h3>DOING List</h3>
                     <p id="nbrDoing">0</p>
                 </div>
@@ -92,7 +90,7 @@
             <!-- DONE LIST -->
             <div class="flex flex-col gap-4 items-center relative">
                 <div id=""
-                    class="border-dashed border-2 border-borderColor rounded-3xl h-16 bg-white  p-4 w-full relative z-10">
+                    class="border-dashed border-2 border-borderColor rounded-3xl h-16 bg-white  p-4 w-full relative z-10 flex justify-between">
                     <h3>DONE List</h3>
                     <p id="nbrDone">0</p>
                 </div>
