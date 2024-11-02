@@ -110,7 +110,7 @@ function showEdit(index){
             description:descriptionEdit.value,
             date:dateEdit.value,
             status:statusEdit.value,
-            priorite:prioriteEdit.value
+            priorite:prioriteEdit.value,
         }
         
         tache[index]=tacheEdit;
