@@ -88,7 +88,9 @@ function afficherTaches(){
             nbrDone++;
         }
     });
-    
+    nbr_todo.innerHTML=nbrTodo;
+    nbr_doing.innerHTML=nbrDoing;
+    nbr_done.innerHTML=nbrDone;
 }
 afficherTaches();
 function showEdit(index){
