@@ -110,7 +110,7 @@ function showEdit(index){
             description:descriptionEdit.value,
             date:dateEdit.value,
             status:statusEdit.value,
-            priorite:prioriteEdit.value,
+            priorite:prioriteEdit.value
         }
         
         tache[index]=tacheEdit;
@@ -118,5 +118,11 @@ function showEdit(index){
     })
 
     afficherTaches();
+
+}
+function deleteTache(index){
+    const tache = JSON.parse(localStorage.getItem("taches")) || [];
+    tache.splice(index,1);
+    
 
 }
