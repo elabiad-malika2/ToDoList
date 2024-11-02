@@ -43,6 +43,10 @@ formTache.addEventListener("submit",ajoutTache);
 
 // Show task
 function afficherTaches(){
+    let nbrTodo=0;
+    let nbrDoing=0;
+    let nbrDone=0; 
+
     document.getElementById("todo-tache").innerHTML=""
     document.getElementById("doing-tache").innerHTML=""
     document.getElementById("done-tache").innerHTML=""
@@ -71,11 +75,14 @@ function afficherTaches(){
         `;
         if (tache.status === "todo") {
             document.getElementById("todo-tache").appendChild(card);
+            nbrTodo++;
         
         } else if (tache.status === "doing"){
             document.getElementById("doing-tache").appendChild(card);
+            nbrDoing++;
         }else{
             document.getElementById("done-tache").appendChild(card);
+            nbrDone++;
         }
     });
     
@@ -105,6 +112,15 @@ function showEdit(index){
         localStorage.setItem("taches",JSON.stringify(tache));
     })
 
+    afficherTaches();
+
+}
+function deleteTache(index){
+    const tache = JSON.parse(localStorage.getItem("taches")) || [];
+    tache.splice(index,1);
+    console.log("tastkt to delelte", tache[index]);
+    
+    localStorage.setItem("taches",JSON.stringify(tache));
     afficherTaches();
 
 }
