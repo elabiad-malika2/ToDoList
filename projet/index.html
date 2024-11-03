@@ -51,25 +51,25 @@
 
             <div class="flex flex-col gap-4 items-center relative h-full">
                 <div id=""
-                    class="border-dashed border-2 border-borderColor rounded-3xl h-16 bg-white  p-4 w-full relative z-10 flex justify-between">
+                    class=" border-2 border-borderColor rounded-3xl h-16 bg-white  p-4 w-full relative z-10 flex justify-between">
                     <h3>TODO List</h3>
                     <p id="nbrTodo">0</p>
 
 
                 </div>
-                <div id="todo-tache" class="border-dashed border-2 border-borderColor rounded-3xl h-auto overflow-y-auto  p-4 w-full relative z-10 ">
+                <div id="todo-tache" class=" border-2 border-borderColor rounded-3xl h-auto overflow-y-auto  p-4 w-full relative z-10 ">
 
                 </div>
             </div>
             <!-- DOING LIST -->
             <div class="flex flex-col gap-4 items-center relative">
                 <div id=""
-                    class="border-dashed border-2 border-borderColor rounded-3xl h-16 bg-white  p-4 w-full relative z-10 flex justify-between">
+                    class=" border-2 border-borderColor rounded-3xl h-16 bg-white  p-4 w-full relative z-10 flex justify-between">
                     <h3>DOING List</h3>
                     <p id="nbrDoing">0</p>
                 </div>
                 <div id="doing-tache"
-                    class="border-dashed border-2 border-borderColor rounded-3xl h-auto w-full p-4 relative z-10">
+                    class=" border-2 border-borderColor rounded-3xl h-auto w-full p-4 relative z-10">
 
                 </div>
             
@@ -77,21 +77,21 @@
             <!-- DONE LIST -->
             <div class="flex flex-col gap-4 items-center relative">
                 <div id=""
-                    class="border-dashed border-2 border-borderColor rounded-3xl h-16 bg-white  p-4 w-full relative z-10 flex justify-between">
+                    class=" border-2 border-borderColor rounded-3xl h-16 bg-white  p-4 w-full relative z-10 flex justify-between">
                     <h3>DONE List</h3>
                     <p id="nbrDone">0</p>
                 </div>
                 <div id="done-tache"
-                    class="border-dashed border-2 border-borderColor rounded-3xl h-auto w-full p-4 z-10">
+                    class=" border-2 border-borderColor rounded-3xl h-auto w-full p-4 z-10">
 
             </div>
             </div>
         </div>
         <!-- FIN Tasks -->
-        <div id="modele" class="modele bg-black bg-opacity-75 hidden items-center justify-center fixed inset-0 z-50 ">
-            <div class="w-1/4 h-screen  border-2 border-black rounded-3xl bg-white relative z-50 ">
+        <div id="modele" class="design modele bg-black bg-opacity-75 hidden items-center justify-center fixed inset-0 z-50 ">
+            <div class=" modele-content  border-2 border-black rounded-3xl bg-white relative z-50 ">
                 <svg class=" fill-primary absolute cursor-pointer top-0 right-0 pr-4 pt-4 w-10 h-8"
-                    xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 24 24">
+                onclick="document.getElementById('modele').style.display='none'" xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 24 24">
                     <path
                         d="M20.48 3.512a11.97 11.97 0 0 0-8.486-3.514C5.366-.002-.007 5.371-.007 11.999c0 3.314 1.344 6.315 3.516 8.487A11.97 11.97 0 0 0 11.995 24c6.628 0 12.001-5.373 12.001-12.001c0-3.314-1.344-6.315-3.516-8.487m-1.542 15.427a9.8 9.8 0 0 1-6.943 2.876c-5.423 0-9.819-4.396-9.819-9.819a9.8 9.8 0 0 1 2.876-6.943a9.8 9.8 0 0 1 6.942-2.876c5.422 0 9.818 4.396 9.818 9.818a9.8 9.8 0 0 1-2.876 6.942z" />
                     <path fill="#5051fa"
@@ -141,10 +141,10 @@
             </div>
         </div>
         <!-- edit model -->
-        <div id="modele-edit" class="modele bg-black bg-opacity-75 hidden items-center justify-center fixed inset-0 z-50 ">
-            <div class="w-1/4 h-auto  border-2 border-black rounded-3xl bg-white relative z-50 ">
-                <svg class=" fill-primary absolute cursor-pointer top-0 right-0 pr-4 pt-2 w-10 h-8"
-                    xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 24 24">
+        <div id="modele-edit" class="design modele bg-black bg-opacity-75 hidden items-center justify-center fixed inset-0 z-50 ">
+            <div class="modele-content  border-2 border-black rounded-3xl bg-white relative z-50 ">
+                <svg class=" fill-primary absolute cursor-pointer top-0 right-0 pr-4 pt-2 w-10 h-8" 
+                onclick="document.getElementById('modele-edit').style.display='none'" xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 24 24">
                     <path
                         d="M20.48 3.512a11.97 11.97 0 0 0-8.486-3.514C5.366-.002-.007 5.371-.007 11.999c0 3.314 1.344 6.315 3.516 8.487A11.97 11.97 0 0 0 11.995 24c6.628 0 12.001-5.373 12.001-12.001c0-3.314-1.344-6.315-3.516-8.487m-1.542 15.427a9.8 9.8 0 0 1-6.943 2.876c-5.423 0-9.819-4.396-9.819-9.819a9.8 9.8 0 0 1 2.876-6.943a9.8 9.8 0 0 1 6.942-2.876c5.422 0 9.818 4.396 9.818 9.818a9.8 9.8 0 0 1-2.876 6.942z" />
                     <path fill="#5051fa"

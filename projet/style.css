@@ -6,3 +6,35 @@
   #error-text.show {
     opacity: 1; 
   }
+#modele .modele-content {
+    width: 90%; /* Par défaut, occupe presque toute la largeur sur les petits écrans */
+    max-width: 400px; /* Limite la largeur sur les petits écrans */
+}
+
+@media (min-width: 640px) { /* Petits écrans (sm) */
+    .design .modele-content {
+        width: 75%; /* Augmente la largeur */
+        max-width: 600px; /* Limite la largeur */
+    }
+}
+
+@media (min-width: 768px) { /* Moyens écrans (md) */
+    .design .modele-content {
+        width: 60%; /* Réduit légèrement la largeur */
+        max-width: 700px;
+    }
+}
+
+@media (min-width: 1024px) { /* Grands écrans (lg) */
+    .design .modele-content {
+        width: 40%; /* Réduit davantage pour les grands écrans */
+        max-width: 800px;
+    }
+}
+
+@media (min-width: 1280px) { /* Très grands écrans (xl) */
+    .design .modele-content {
+        width: 30%; /* Limite la largeur pour les très grands écrans */
+        max-width: 1000px;
+    }
+}

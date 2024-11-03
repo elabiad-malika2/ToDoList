@@ -91,7 +91,7 @@ function afficherTaches(){
         const card = document.createElement("div");
         card.className="card w-full h-32 bg-white rounded-bl-3xl rounded-br-3xl flex flex-col mb-8 relative ";
         card.innerHTML = `
-            <div class="absolute top-0 left-0 w-full h-2 ${tache.priorite === '1' ? 'bg-red-500' : tache.priorite === '2' ? 'bg-black' : 'bg-green-500'} rounded-t-3xl"></div>
+            <div  class="absolute top-0 left-0 w-full  h-2 ${tache.priorite === '1' ? 'bg-red-500' : tache.priorite === '2' ? 'bg-black' : 'bg-green-500'} rounded-t-3xl"></div>
             <div class="flex flex-col px-4 h-full justify-center items-center relative">
                 <div class="absolute top-4 right-2" >
                     <svg onclick="showEdit(${index})" xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 24 24" class="fill-current text-gray-600">
