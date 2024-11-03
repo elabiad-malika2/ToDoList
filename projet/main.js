@@ -50,10 +50,16 @@ function ajoutTache(e){
     if (tachesAjouter.title == "" || tachesAjouter.date === "")
         {
             errorText.innerText='Some Inputs are empty!!'
-            errorText.className='text-red-500 text-center'
+            errorText.className='text-red-500 text-center show'
+            setTimeout(() => {
+                errorText.classList.remove('show'); // Enlever la classe après 3 secondes
+            }, 3000);
         }else if (new Date(tachesAjouter.date) < new Date()) {
             errorText.innerText = "Date cannot be in the past!";
-            errorText.className = "text-red-500 text-center"; 
+            errorText.className = "text-red-500 text-center show"; 
+            setTimeout(() => {
+                errorText.classList.remove('show'); // Enlever la classe après 3 secondes
+            }, 3000);
         }else{
             const tache = JSON.parse(localStorage.getItem("taches")) || [];
             tache.push(tachesAjouter);

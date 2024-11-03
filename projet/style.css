@@ -1,0 +1,8 @@
+#error-text {
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
+  }
+  
+  #error-text.show {
+    opacity: 1; 
+  }
