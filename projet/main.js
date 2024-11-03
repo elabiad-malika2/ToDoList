@@ -120,9 +120,14 @@ function showEdit(index){
     afficherTaches();
 
 }
+
+
 function deleteTache(index){
     const tache = JSON.parse(localStorage.getItem("taches")) || [];
     tache.splice(index,1);
+    console.log("tastkt to delelte", tache[index]);
     
+    localStorage.setItem("taches",JSON.stringify(tache));
+    afficherTaches();
 
 }
