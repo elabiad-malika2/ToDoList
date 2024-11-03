@@ -50,7 +50,7 @@
         <div class="bg-gray-100 p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-full">
 
             <div class="flex flex-col gap-4 items-center relative h-full">
-                <div id=""
+                <div 
                     class=" border-2 border-borderColor rounded-3xl h-16 bg-white  p-4 w-full relative z-10 flex justify-between">
                     <h3>TODO List</h3>
                     <p id="nbrTodo">0</p>
@@ -63,7 +63,7 @@
             </div>
             <!-- DOING LIST -->
             <div class="flex flex-col gap-4 items-center relative">
-                <div id=""
+                <div 
                     class=" border-2 border-borderColor rounded-3xl h-16 bg-white  p-4 w-full relative z-10 flex justify-between">
                     <h3>DOING List</h3>
                     <p id="nbrDoing">0</p>
@@ -76,7 +76,7 @@
             </div>
             <!-- DONE LIST -->
             <div class="flex flex-col gap-4 items-center relative">
-                <div id=""
+                <div 
                     class=" border-2 border-borderColor rounded-3xl h-16 bg-white  p-4 w-full relative z-10 flex justify-between">
                     <h3>DONE List</h3>
                     <p id="nbrDone">0</p>
@@ -102,31 +102,31 @@
                     <h3 class=" flex justify-center items-center">Ajouter une tache</h3>
                     <form id="form-tache" action="" class="flex flex-col pt-16 gap-4">
 
-                        <select value="" class=" border-2 border-gray-200 rounded-lg p-2" id="priorite-liste">
-                            <option id="" disabled> ---Choose a priority--- </option>
+                        <select  class=" border-2 border-gray-200 rounded-lg p-2" id="priorite-liste">
+                            <option  disabled> ---Choose a priority--- </option>
                             <option value="1"> P1 </option>
                             <option value="2"> P2 </option>
                             <option value="3"> P3 </option>
                         </select>
                         <div class="flex flex-col">
-                            <label for="tache-titre ">Title</label>
+                            <label for="tache-titre">Title</label>
                             <input class=" border-gray-200 border-2 rounded-lg p-2" type="text"
                                 id="tache-titre" name="task-title">
                         </div>
-                        <select value="" class=" border-2 border-gray-200 rounded-lg p-2" id="status">
-                            <option id="" disabled> ---Choose a Staut--- </option>
+                        <select  class=" border-2 border-gray-200 rounded-lg p-2" id="status">
+                            <option  disabled> ---Choose a Staut--- </option>
                             <option value="todo"> To Do </option>
                             <option value="doing"> Doing </option>
                             <option value="done"> Done</option>
                         </select>
                         <div class="flex flex-col">
                             <label for="tache-date">Date</label>
-                            <input value="" class=" border-gray-200 border-2 rounded-lg p-2" type="date"
+                            <input  class=" border-gray-200 border-2 rounded-lg p-2" type="date"
                                 id="tache-date" name="task-date">
                         </div>
                         <div class="flex flex-col">
-                            <label value="" for="tache-description">Description</label>
-                            <textarea value="" class=" border-gray-200 border-2 rounded-lg p-2"
+                            <label  for="tache-description">Description</label>
+                            <textarea  class=" border-gray-200 border-2 rounded-lg p-2"
                                 id="tache-description" name="task-description"></textarea>
                         </div>
                         <button type="submit" id="bouton-ajouter"
@@ -153,10 +153,10 @@
 
                 <div class="flex flex-col p-4">
                     <h3 class=" flex justify-center items-center">Modifer une tache</h3>
-                    <form id="form-tache-edit" action="" class="flex flex-col pt-16 gap-4">
+                    <form id="form-tache-edit"  class="flex flex-col pt-16 gap-4">
 
-                        <select value="" class=" border-2 border-gray-200 rounded-lg p-2" id="priorite-liste-edit">
-                            <option id="" disabled> ---Choose a priority--- </option>
+                        <select  class=" border-2 border-gray-200 rounded-lg p-2" id="priorite-liste-edit">
+                            <option  disabled> ---Choose a priority--- </option>
                             <option value="1"> P1 </option>
                             <option value="2"> P2 </option>
                             <option value="3"> P3 </option>
@@ -166,26 +166,26 @@
                             <input  class=" border-gray-200 border-2 rounded-lg p-2" type="text"
                                 id="tache-titre-edit" name="task-title">
                         </div>
-                        <select value="" class=" border-2 border-gray-200 rounded-lg p-2" id="status-edit">
-                            <option id="" disabled> ---Choose a Staut--- </option>
+                        <select  class=" border-2 border-gray-200 rounded-lg p-2" id="status-edit">
+                            <option  disabled> ---Choose a Staut--- </option>
                             <option value="todo"> To Do </option>
                             <option value="doing"> Doing </option>
                             <option value="done"> Done</option>
                         </select>
                         <div class="flex flex-col">
                             <label for="tache-date-edit">Date</label>
-                            <input value="" class=" border-gray-200 border-2 rounded-lg p-2" type="date"
+                            <input  class=" border-gray-200 border-2 rounded-lg p-2" type="date"
                                 id="tache-date-edit" name="task-date">
                         </div>
                         <div class="flex flex-col">
-                            <label value="" for="tache-description-edit">Description</label>
-                            <textarea value="" class=" border-gray-200 border-2 rounded-lg p-2"
+                            <label  for="tache-description-edit">Description</label>
+                            <textarea  class=" border-gray-200 border-2 rounded-lg p-2"
                                 id="tache-description-edit" name="task-description"></textarea>
                         </div>
                         <button type="submit" id="bouton-editer"
                             class="color-primary bg-primary rounded-3xl h-12 w-full text-white font-title font-bold ">Save
                             Task</button>
-                        <div id="error">
+                        <div>
                             <p class="text-red-500 text-center" id="error-text"></p>
                         </div>
                     </form>
