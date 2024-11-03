@@ -45,4 +45,3 @@ TaskFlow est une application de gestion de tâches développée pour aider l'éq
 1. **Cloner le dépôt Git** :
    ```bash
    git clone https://github.com/elabiad-malika2/ToDoList.git
-   cd taskflow
