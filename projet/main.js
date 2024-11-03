@@ -9,6 +9,7 @@ const formTache = document.getElementById("form-tache");
 const nbr_todo = document.getElementById("nbrTodo");
 const nbr_doing = document.getElementById("nbrDoing");
 const nbr_done = document.getElementById("nbrDone");
+const errorText = document.getElementById("error-text");
 // Edit
 const modeleEdit = document.getElementById("modele-edit");
 const prioriteEdit = document.getElementById("priorite-liste-edit");
@@ -23,12 +24,22 @@ const formEdit = document.getElementById("form-tache-edit");
 
 
 document.getElementById("addTache").onclick = () => {
+    resetFormInputs();
     modele.style.display = "flex";
 
 };
-// Task Add
-function ajoutTache(){
+function resetFormInputs() {
+    titre.value = "";
+    descriptionTache.value = "";
+    dateTache.value = "";
+    statusTache.value = "todo"; // ou la valeur par défaut souhaitée
+    prioriteList.value = "1"; // ou la valeur par défaut souhaitée
+    errorText.innerText = ""; // Réinitialiser le message d'erreur
+}
 
+// Task Add
+function ajoutTache(e){
+    e.preventDefault();
     let tachesAjouter ={
         title:titre.value,
         description:descriptionTache.value,
@@ -36,13 +47,27 @@ function ajoutTache(){
         status:statusTache.value,
         priorite:prioriteList.value
     }
-    console.log(tachesAjouter);
-    const tache = JSON.parse(localStorage.getItem("taches")) || [];
-    tache.push(tachesAjouter)
-    localStorage.setItem("taches", JSON.stringify(tache))
+    if (tachesAjouter.title == "" || tachesAjouter.date === "")
+        {
+            errorText.innerText='Some Inputs are empty!!'
+            errorText.className='text-red-500 text-center'
+        }else if (new Date(tachesAjouter.date) < new Date()) {
+            errorText.innerText = "Date cannot be in the past!";
+            errorText.className = "text-red-500 text-center"; 
+        }else{
+            const tache = JSON.parse(localStorage.getItem("taches")) || [];
+            tache.push(tachesAjouter);
+            localStorage.setItem("taches", JSON.stringify(tache));
+            modele.style.display="none";
+            afficherTaches();
+        }
+        
+
+    
 }
 
 formTache.addEventListener("submit",ajoutTache);
+
 
 // Show task
 function afficherTaches(){
